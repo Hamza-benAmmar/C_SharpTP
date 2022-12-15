@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<Student>
+@{
+    foreach (Student s in Model)
+    {
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">@s.first_name @s.last_name</h5>
+            <h6 class="card-subtitle mb-2 text-muted">tel : @s.phone_number</h6>
+            <h6 class="card-subtitle mb-2 text-muted">University : @s.university</h6>
+            <!--<a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>-->
+        </div>
+    </div>
+    }
+}
