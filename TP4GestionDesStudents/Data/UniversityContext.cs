@@ -6,7 +6,9 @@ namespace TP4GestionDesStudents.Data
     public class UniversityContext:DbContext
     {
         public DbSet<Student> Student { get; set; }
+
         private static UniversityContext? _instance;
+
         public static UniversityContext Instance
         {
             get
@@ -20,6 +22,7 @@ namespace TP4GestionDesStudents.Data
                 return _instance;
             }
         }
+
         private UniversityContext(DbContextOptions o) : base(o) { }
 
         private static UniversityContext Instantiate_UniversityContext()

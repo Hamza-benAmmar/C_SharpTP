@@ -2,7 +2,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-	ViewData["Title"] = "Index";
+	ViewData["Title"] = "Home page - liste des etudiants";
 }
 <h1>Student Cards</h1>
 @model IEnumerable<Student>
@@ -17,8 +17,6 @@
             <h6 class="card-subtitle mb-2 text-muted">University : @s.university</h6>
             <h6 class="card-subtitle mb-2 text-muted">University : @s.timestamp</h6>
             <h6 class="card-subtitle mb-2 text-muted">Course : @s.course</h6>
-            <!--<a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>-->
         </div>
         </div>
     }

@@ -11,15 +11,14 @@ namespace TP4GestionDesStudents.Controllers
         public IActionResult UniqueCourses()
         {
             IStudentRepository students = new StudentRepository(UniversityContext.Instance);
-            //ViewBag.Courses = students.GetUniqueCourses();
             return View(students.GetUniqueCourses());
         }
 
         // GET: Student
         public IActionResult Index()
         {
-            UniversityContext u = UniversityContext.Instance;
-            List<Student> s = u.Student.ToList();
+            UniversityContext universityContext = UniversityContext.Instance;
+            List<Student> s = universityContext.Student.ToList();
             return View(s);
         }
         [Route("Student/StudentByCourse/{Course}")]
